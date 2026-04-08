@@ -6,11 +6,12 @@ fun insertCode(
 
 ) {
     val sourceCode = SourceCode()
-    val gameCommandInput = GameCommandInput()
-    while (/*sourceCode.getSourceCode.last() != "/endr"*/ true) {
-        sourceCode.setSourceCode(readln())
-        gameCommandInput.isCommand(
-
-        )
+    val gameCommandInput = GameCommandInput(sourceCode)
+    while (sourceCode.getSourceCode.last() != "/endr") {
+        val read: String = readln()
+        if (gameCommandInput.isCommand(read)) {
+            sourceCode.getSourceCode.add(read)
+            sourceCode.getSourceCode.add(read)
+        }
     }
 }

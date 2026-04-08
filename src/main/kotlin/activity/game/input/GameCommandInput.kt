@@ -1,18 +1,20 @@
 package activity.game.input
 
+import activity.clear
 import activity.game.SourceCode
 
 
-class GameCommandInput : SourceCode() {
-    fun isCommand(input: String) {
+class GameCommandInput(val sourceCode: SourceCode) {
+    fun isCommand(input: String): Boolean {
         when (input) {
             GameCommand.REVIEWC.command -> {
-                getSourceCode.forEach { codeln ->
+                clear()
+                sourceCode.getSourceCode.forEach { codeln ->
                     println(codeln)
                 }
+                return false
             }
-
-
+            else -> return true
         }
     }
 }
