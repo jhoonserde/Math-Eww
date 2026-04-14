@@ -5,6 +5,9 @@ import activity.game.input.insertCode
 
 
 fun codeEditor() {
+
     clear()
+
     insertCode()
+
 }

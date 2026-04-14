@@ -6,7 +6,9 @@ import activity.menu.helpTitle
 import activity.menu.optionsTitle
 
 class MenuCommandInput(val input: String) {
+
     var isError: Boolean = false
+
     fun executeCommand() {
         //check is input blank
         when (input) {

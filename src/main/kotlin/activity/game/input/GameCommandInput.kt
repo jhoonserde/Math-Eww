@@ -3,8 +3,8 @@ package activity.game.input
 import activity.clear
 import activity.game.SourceCode
 
-
 class GameCommandInput(val sourceCode: SourceCode) {
+
     fun isCommand(input: String): Boolean {
         when (input) {
             GameCommand.REVIEWC.command -> {
