@@ -6,7 +6,7 @@ class SourceCode {
     private val sourceCode: MutableList<String> = mutableListOf()
 
 //    hanya untuk di get atau di lihat saja
-    val getSourceCode: MutableList<String> = mutableListOf("/// Mode : Review code")
+    val getSourceCode: MutableList<String> = mutableListOf()
 
 //    karena sourceCode asli hanya bisa di set di class ini
     fun setSourceCode(inputUserCode: String) {

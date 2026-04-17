@@ -1,6 +1,7 @@
 package activity.game.input
 
 import activity.game.SourceCode
+import activity.game.mode.Mode
 
 fun insertCode() {
 
@@ -8,11 +9,11 @@ fun insertCode() {
 
     val gameCommandInput = GameCommandInput(sourceCode)
 
-    while (sourceCode.getSourceCode.last() != "/endr") {
+    while (true) {
         val read: String = readln()
         if (gameCommandInput.isCommand(read)) {
             sourceCode.getSourceCode.add(read)
-            sourceCode.getSourceCode.add(read)
+            sourceCode.setSourceCode(read)
         }
     }
 }
