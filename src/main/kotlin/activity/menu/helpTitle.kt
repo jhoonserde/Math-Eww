@@ -1,18 +1,16 @@
 package activity.menu
 
 import activity.clear
+import activity.graphics.mathEwwAscii
 import activity.menu.input.MenuCommandInput
 
 fun helpTitle() {
     val titleHelpMenu = """
-        |menu menu: 
-        |   start       to start the fizzbuzz game
-        |   options     to view the option menus
-        |   help        for help and guidance
-        |   exit        to quit this game
-        |   
-        |   
-    """.trimMargin()
+    !$mathEwwAscii
+    !Help menu Command:
+    !   
+    !   
+    """.trimMargin("!")
     clear()
     println(titleHelpMenu)
     do {

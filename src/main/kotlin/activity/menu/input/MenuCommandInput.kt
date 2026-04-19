@@ -11,10 +11,9 @@ class MenuCommandInput(val input: String) {
     fun executeCommand() {
         //check is input blank
         when (input) {
-            MenuCommand.START.nameMenu -> {}
             MenuCommand.OPTIONS.nameMenu -> optionsTitle()
             MenuCommand.HELP.nameMenu -> helpTitle()
-            MenuCommand.EXIT.nameMenu -> println("Exit the game")
+            MenuCommand.EXIT.nameMenu -> println("Exit")
             else -> {
                 if (input.isNotBlank()) println(
                     ErrorMessage(this).errorMessage()
