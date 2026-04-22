@@ -1,24 +1,25 @@
 package activity.menu.input
 
 import activity.ErrorMessage
-import activity.menu.helpTitle
-import activity.menu.optionsTitle
+import activity.menu.tui.TuiManager
 
-class MenuCommandInput(val input: String) {
+class MenuCommandInput(val input: String) : TuiManager() {
 
-    var isError: Boolean = false
+    val tui = TuiManager()
 
     fun executeCommand() {
         //check is input blank
         when (input) {
-            MenuCommand.OPTIONS.nameMenu -> optionsTitle()
-            MenuCommand.HELP.nameMenu -> helpTitle()
+
+            MenuCommand.OPTIONS.nameMenu -> tui.selectedMenu(1)
+
+            MenuCommand.HELP.nameMenu -> tui.selectedMenu(2)
+
             MenuCommand.EXIT.nameMenu -> println("Exit")
+
             else -> {
-                if (input.isNotBlank()) println(
-                    ErrorMessage(this).errorMessage()
-                )
-                isError = true
+                tui.selectedMenu(tui.lastIdMenu)
+                println(ErrorMessage(this).errorMessage())
             }
         }
     }
