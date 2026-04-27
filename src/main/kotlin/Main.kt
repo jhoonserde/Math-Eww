@@ -1,9 +1,11 @@
 import activity.menu.input.Input
 import activity.menu.input.command.ExecCommand
 import activity.menu.tui.TuiManager
+import activity.test
 
 fun main() {
-
+    test()
+/*
     val tuiManager = TuiManager()
 
     tuiManager.selectedMenu(0)
@@ -16,5 +18,5 @@ fun main() {
             inputObject = input
         )
         execCommand.executeCommand()
-    } while (input.isRead)
+    } while (input.isRead)*/
 }
